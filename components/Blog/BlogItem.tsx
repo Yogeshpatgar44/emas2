@@ -34,10 +34,16 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         <div className="px-4">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-lg font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
             <Link href={`/blog/blog-details`}>
-              {`${title.slice(0, 40)}...`}
+              {title}
             </Link>
           </h3>
-          <p className="line-clamp-3">{metadata}</p>
+          <p className="">{metadata}</p>
+          <Link
+            href={`/blog/blog-details`}
+            className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+          >
+            Read More
+          </Link>
         </div>
       </motion.div>
     </>

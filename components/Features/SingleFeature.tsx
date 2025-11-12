@@ -2,6 +2,7 @@ import React from "react";
 import { Feature } from "@/types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, description } = feature;
@@ -33,6 +34,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {title}
         </h3>
         <p>{description}</p>
+        <Link href={`/features/feature-details`} className="mt-4 inline-block text-sm font-medium text-primary hover:underline">Read More</Link>
       </motion.div>
     </>
   );
